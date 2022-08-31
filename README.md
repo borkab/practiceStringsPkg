@@ -1,6 +1,10 @@
 # practiceStringsPkg
-TrimSpace\n
-Contains\n
-HasPrefix\n
-HasSuffix\n
-NewReader\n
+TrimSpace
+
+Contains
+
+HasPrefix
+
+HasSuffix
+
+NewReader
