@@ -23,3 +23,8 @@ func MyHasSuffix(str1, str2 string) bool {
 	bl := strings.HasSuffix(str1, str2)
 	return bl
 }
+
+func MyNewReader(str1 string) *strings.Reader {
+	new := strings.NewReader(str1)
+	return new
+}

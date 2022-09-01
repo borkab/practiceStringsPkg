@@ -1,6 +1,9 @@
 package my
 
-import "testing"
+import (
+	"strings"
+	"testing"
+)
 
 func TestMyTrim(t *testing.T) {
 	s := "\n\t\t\t\n Pinke Panke \t\t\n\n\t"
@@ -84,3 +87,23 @@ func TestMyHasSuffix(t *testing.T) {
 		}
 	})
 }
+
+func TestMyNewReader(t *testing.T) {
+	str := "coding is my cardio"
+	got := MyNewReader(str)
+
+	want := strings.NewReader("coding is my cardio")
+
+	if got != want {
+		t.Errorf("got %#v want %#v", got, want)
+	}
+}
+
+/*
+[borkab@everest practiceStringsPkg]$ go test
+--- FAIL: TestMyNewReader (0.00s)
+    my_test.go:98: got &strings.Reader{s:"coding is my cardio", i:0, prevRune:-1} want &strings.Reader{s:"coding is my cardio", i:0, prevRune:-1}
+FAIL
+exit status 1
+FAIL    github.com/borkab/practiceStringsPkg    0.002s
+*/
